@@ -69,6 +69,8 @@ public class Department {
         this.location = location;
     }
 
+
+    // one to many mean "one" Department(this class) contain "many" Employee (other class)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
     public Set<Employee> getEmployees() {
         return employees;
